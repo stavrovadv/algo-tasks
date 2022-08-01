@@ -13,13 +13,10 @@ const longestCommonPrefix = function(strs) {
             continue;
         }
 
-
         if(!word.startsWith(prefix)){
-            if(word.length < prefix.length) {
-                prefix = prefix.slice(0, word.length);
-            }
-
-            for(let j = 0; j < prefix.length; j++){
+            const minLength = Math.min(word.length, prefix.length)
+            prefix  = prefix.slice(0, minLength)
+            for(let j = 0; j < minLength; j++){
                 if(word[j] !== prefix[j]) {
                     prefix  = prefix.slice(0, j)
                 }
@@ -31,3 +28,5 @@ const longestCommonPrefix = function(strs) {
 };
 
 console.log(longestCommonPrefix(["c","acc","ccc"]));
+
+// Сложность O(k), где K-количество символов во всех словах в сумме

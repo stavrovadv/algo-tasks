@@ -20,3 +20,5 @@ var isValid = function(s) {
 
 console.log(isValid("()[]{}"))
 console.log(isValid("{[]}"))
+
+// Сложность O(3n)=>O(n),  т.к. константа 3 пары, где n - s.length
