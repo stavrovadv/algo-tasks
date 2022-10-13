@@ -35,5 +35,5 @@ const reverseWords = function (s) {
    return resArr.join();
 };
 
-console.log(reverseWords("Let's take LeetCode contest"))
+console.log(reverseWords("Let's take LeetCode yandex"))
 //O(n)
